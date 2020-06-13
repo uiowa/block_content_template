@@ -23,7 +23,3 @@ See following issues on drupal.org for more background
 - https://www.drupal.org/node/2704331
 - https://www.drupal.org/project/drupal/issues/2666578
 - https://www.drupal.org/project/drupal/issues/2859197
-
-## Development, issues and releases
-
-Currently living on GitHub, I'll sync back to d.o in case more people are interested in the module.

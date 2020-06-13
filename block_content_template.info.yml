@@ -2,6 +2,7 @@ type: module
 name: 'Block content template'
 description: 'Renders block content in a template'
 core: 8.x
+core_version_requirement: ^8.8 || ^9
 version: VERSION
 dependencies:
-  - block_content
+  - drupal:block_content

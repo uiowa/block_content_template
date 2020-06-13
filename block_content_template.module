@@ -42,13 +42,12 @@ function template_preprocess_block_content(&$variables) {
   $variables['bundle'] = $block_content->bundle();
   $variables['view_mode'] = $variables['elements']['#view_mode'];
   $variables['label'] = $variables['block_content']->label();
-  $variables['content'] = [];
 
-  $content = [];
-  foreach (Element::children($variables) as $key) {
-    $content[] = $variables[$key];
+  // Helpful $content variable for templates.
+  $variables += ['content' => []];
+  foreach (Element::children($variables['elements']) as $key) {
+    $variables['content'][$key] = $variables['elements'][$key];
   }
-  $variables['content'] = $content;
 
   // Create a valid HTML ID and make sure it is unique.
   if (!empty($variables['elements']['#id'])) {

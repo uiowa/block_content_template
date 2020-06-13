@@ -14,7 +14,7 @@ use Drupal\Core\Render\Element;
  */
 function block_content_template_theme() {
   return [
-    'block_content_template' => [
+    'block_content' => [
       'render element' => 'elements',
     ],
   ];

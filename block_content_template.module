@@ -41,7 +41,7 @@ function template_preprocess_block_content(&$variables) {
   $variables['id'] = $block_content->id();
   $variables['bundle'] = $block_content->bundle();
   $variables['view_mode'] = $variables['elements']['#view_mode'];
-  $variables['label'] = $variables['block_content']->label();
+  $variables['label'] = $block_content->label();
 
   // Helpful $content variable for templates.
   $variables += ['content' => []];

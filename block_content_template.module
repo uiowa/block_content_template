@@ -29,7 +29,7 @@ function block_content_template_block_content_view_alter(array &$build, EntityIn
   // - the block entity has a view property
   // - the block entity has a _referringItem property
   if (isset($build['_layout_builder']) || isset($entity->view) || isset($entity->_referringItem)) {
-    $build['#theme'] = 'block_content_template';
+    $build['#theme'] = 'block_content';
   }
 }
 
@@ -70,7 +70,7 @@ function template_preprocess_block_content(&$variables) {
 /**
  * Implements hook_theme_suggestions_HOOK().
  */
-function block_content_template_theme_suggestions_block_content_template(array $variables) {
+function block_content_template_theme_suggestions_block_content(array $variables) {
   $suggestions = [];
   $block_content = $variables['elements']['#block_content'];
   $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
